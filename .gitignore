@@ -1,3 +1,6 @@
 node_modules/
 .cache/
 public
+
+# Local Netlify folder
+.netlify
