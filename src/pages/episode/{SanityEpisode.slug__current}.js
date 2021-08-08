@@ -28,7 +28,7 @@ export default function SanityEpisode({ data }) {
   return (
     episode.youtubeID && (
       <Layout title={episode.title} description={episode.description}>
-        {episode.image ? (
+        {episode.image && episode.image.asset ? (
           <GatsbyImage
             image={episode.image.asset.gatsbyImageData}
             alt={episode.title}
