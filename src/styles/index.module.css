@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.image-wrapper .gatsby-image-wrapper {
+.image-wrapper [data-gatsby-image-wrapper] {
   border: 3px solid var(--black);
   border-radius: 50%;
 }
