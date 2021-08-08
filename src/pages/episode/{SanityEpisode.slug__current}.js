@@ -28,14 +28,14 @@ export default function SanityEpisode({ data }) {
   return (
     episode.youtubeID && (
       <Layout title={episode.title} description={episode.description}>
-        {episode.image && episode.image.asset ? (
+        {episode.image ? (
           <GatsbyImage
             image={episode.image.asset.gatsbyImageData}
             alt={episode.title}
           />
         ) : (
           <StaticImage
-            url={`https://www.learnwithjason.dev/${episode.slug.current}/poster.jpg`}
+            src={`https://www.learnwithjason.dev/${episode.slug.current}/poster.jpg`}
             alt={episode.title}
           />
         )}
