@@ -33,12 +33,7 @@ export default function SanityEpisode({ data }) {
             image={episode.image.asset.gatsbyImageData}
             alt={episode.title}
           />
-        ) : (
-          <StaticImage
-            src={`https://www.learnwithjason.dev/${episode.slug.current}/poster.jpg`}
-            alt={episode.title}
-          />
-        )}
+        ) : null}
         <h1>{episode.title}</h1>
         <p>
           (posted {episode.date}) — {episode.description}
