@@ -1,6 +1,6 @@
 .header {
-  background: #333;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -15,8 +15,8 @@
 
 .header a:focus,
 .header a:hover {
-  background: #fff;
-  color: #333;
+  background: var(--white);
+  color: var(--black);
 }
 
 .content {
