@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import Layout from '../../components/layout.js';
 
 export const query = graphql`
@@ -28,10 +28,17 @@ export default function SanityEpisode({ data }) {
   return (
     episode.youtubeID && (
       <Layout title={episode.title} description={episode.description}>
-        <GatsbyImage
-          image={episode.image.asset.gatsbyImageData}
-          alt={episode.title}
-        />
+        {episode.image ? (
+          <GatsbyImage
+            image={episode.image.asset.gatsbyImageData}
+            alt={episode.title}
+          />
+        ) : (
+          <StaticImage
+            url={`https://www.learnwithjason.dev/${episode.slug.current}/poster.jpg`}
+            alt={episode.title}
+          />
+        )}
         <h1>{episode.title}</h1>
         <p>
           (posted {episode.date}) — {episode.description}
