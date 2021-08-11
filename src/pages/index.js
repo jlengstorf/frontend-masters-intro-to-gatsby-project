@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-
 import Layout from '../components/layout.js';
+
 import { imageWrapper } from '../styles/index.module.css';
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query GetBlogPosts {
-      allMdx {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           id
           slug
           frontmatter {
             title
-            # description
-            # date(fromNow: true)
+            description
+            date(fromNow: true)
           }
         }
       }
@@ -23,19 +23,19 @@ export default function IndexPage() {
   `);
 
   const posts = data.allMdx.nodes;
-  console.log('posts', posts);
 
   return (
     <Layout>
       <div className={imageWrapper}>
         <StaticImage
           src="../images/ivana-la-61jg6zviI7I-unsplash.jpg"
-          alt="a corgi sitting on a bed with red paper hearts all over it. it looks unamused."
+          alt="a corgi sitting on a bed with red paper hearts all over it. it looks unamused"
           placeholder="dominantColor"
           width={300}
           height={300}
         />
       </div>
+
       <h1>Hello Frontend Masters!</h1>
       <Link to="/about">About this site</Link>
 

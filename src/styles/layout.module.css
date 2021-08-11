@@ -14,13 +14,12 @@
 }
 
 .header a:focus,
-.header:hover {
+.header a:hover {
   background: var(--white);
   color: var(--black);
 }
 
 .content {
-  /* Look up research about line length and width's effect on reading */
   margin: 3rem auto;
   max-width: 54ch;
 }

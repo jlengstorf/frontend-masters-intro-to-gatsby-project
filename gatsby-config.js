@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: '🍕🍗🥦 Frontend Masters Intro to Gatsby',
-    description: 'Frontend Masters Intro to Gatsby Course',
+    title: 'Frontend Masters Intro to Gatsby',
+    description: 'Frontend Masters Intro to Gatsby course projects',
     image:
-      'https://res.cloudinary.com/adriantoddross/image/upload/v1596736103/Adrian_Ross_-_Headshot_3.jpg',
+      'https://res.cloudinary.com/jlengstorf/image/upload/v1628127675/frontend-masters/gatsby-intro/share-image.jpg',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -12,13 +12,13 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/posts`,
       },
     },
     {
       resolve: 'gatsby-plugin-page-creator',
       options: {
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/posts`,
       },
     },
     'gatsby-remark-images',
@@ -42,7 +42,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/images`,
       },
     },
     'gatsby-plugin-image',

@@ -9,19 +9,19 @@ export function Seo(props) {
         siteMetadata {
           title
           description
-          siteUrl
           image
+          siteUrl
         }
       }
     }
   `);
 
-  const defaults = data.site.siteMetadata;
+  const defaults = data?.site?.siteMetadata;
 
   const title = props.title || defaults.title;
   const description = props.description || defaults.description;
   const image = new URL(props.image || defaults.image, defaults.siteUrl);
-  const url = new URL(props.path || `/`, defaults.siteUrl);
+  const url = new URL(props.path || '/', defaults.siteUrl);
 
   return (
     <Helmet>
@@ -34,7 +34,7 @@ export function Seo(props) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {image && <meta property="og:image" content={image} />}
+      {image && <meta name="og:image" content={image} />}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
