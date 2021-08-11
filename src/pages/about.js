@@ -1,18 +1,15 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import { Seo } from '../components/seo.js';
+import Layout from '../components/layout.js';
 
 export default function AboutPage() {
   return (
-    <>
-      <Seo
-        title="About This Site"
-        description="More information about this site."
-      />
-      <main>
-        <h1>About This Site</h1>
-        <Link to="/">Back to home</Link>
-      </main>
-    </>
+    <Layout
+      title="About This Site"
+      description="More information about this site."
+    >
+      <h1>About This Site</h1>
+      <Link to="/">Back to home</Link>
+    </Layout>
   );
 }
