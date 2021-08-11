@@ -6,4 +6,5 @@ module.exports = {
     image:
       'https://res.cloudinary.com/adriantoddross/image/upload/v1596736103/Adrian_Ross_-_Headshot_3.jpg',
   },
+  plugins: ['gatsby-plugin-react-helmet']
 };
