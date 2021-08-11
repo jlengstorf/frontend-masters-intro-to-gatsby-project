@@ -23,6 +23,7 @@
     "gatsby-plugin-page-creator": "^3.11.0",
     "gatsby-plugin-react-helmet": "^4.11.0",
     "gatsby-plugin-sharp": "^3.11.0",
+    "gatsby-remark-images": "^5.8.0",
     "gatsby-source-filesystem": "^3.11.0",
     "gatsby-transformer-sharp": "^3.11.0",
     "react": "^17.0.2",
