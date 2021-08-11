@@ -4,6 +4,7 @@ import Layout from './layout';
 
 export default function PostLayout({ children, pageContext }) {
   const { title, description } = pageContext.frontmatter;
+  console.log("pageContext", pageContext)
 
   return (
     <Layout title={title} description={description}>
