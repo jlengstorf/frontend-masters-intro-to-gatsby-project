@@ -8,7 +8,7 @@ import { imageWrapper } from '../styles/index.module.css';
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query GetBlogPosts {
-      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 10) {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 10) { 
         nodes {
           id
           slug
