@@ -47,6 +47,7 @@ export default function SanityEpisode({ data }) {
           <a href={`https://youtu.be/${episode.youtubeID}`}>watch on YouTube</a>
         </li>
       </ul>
+      <p>Some new information.</p>
     </Layout>
   );
 }
