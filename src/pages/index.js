@@ -8,7 +8,7 @@ import { imageWrapper } from '../styles/index.module.css';
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query GetBlogPosts {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 10) { 
         nodes {
           id
           slug
@@ -44,7 +44,7 @@ export default function IndexPage() {
       <div className={imageWrapper}>
         <StaticImage
           src="../images/ivana-la-61jg6zviI7I-unsplash.jpg"
-          alt="a corgi sitting on a bed with red paper hearts all over it. it looks unamused"
+          alt="a corgi sitting on a bed with red paper hearts all over it. it looks unamused."
           placeholder="dominantColor"
           width={300}
           height={300}
