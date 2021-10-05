@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import SeoSocial from '../components/seo';
 
+import { header, content } from '../styles/layout.module.css';
+import '../styles/global.css';
+
 export default function Layout({
   children,
   title = false,
@@ -29,13 +32,13 @@ export default function Layout({
         image={image}
         path={path}
       />
-      <header>
+      <header className={header}>
         <Link to="/">{meta.title}</Link>
+        <nav>
+          <Link to="/about">About</Link>
+        </nav>
       </header>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-      <main>{children}</main>
+      <main className={content}>{children}</main>
     </>
   );
 }
