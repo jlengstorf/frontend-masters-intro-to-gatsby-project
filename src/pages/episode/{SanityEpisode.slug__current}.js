@@ -27,10 +27,14 @@ export default function SanityEpisode({ data }) {
 
   return (
     <Layout title={episode.title} description={episode.description}>
-      <GatsbyImage
-        image={episode.image.asset.gatsbyImageData}
-        alt={episode.title}
-      />
+      {episode.image?.asset?.gatsbyImageData && (
+        <GatsbyImage
+          image={episode.image.asset.gatsbyImageData}
+          alt={episode.title}
+        />
+      )}
+
+      <h1>{episode.title}</h1>
       <p>
         (posted{episode.date} - {episode.description})
       </p>
@@ -40,7 +44,10 @@ export default function SanityEpisode({ data }) {
             Full episode and Details
           </a>
           <li>
-            <a href={`https://youtu.be/${episode.youtubeID}`}> Watch on Youtube</a>
+            <a href={`https://youtu.be/${episode.youtubeID}`}>
+              {' '}
+              Watch on Youtube
+            </a>
           </li>
         </li>
       </ul>
