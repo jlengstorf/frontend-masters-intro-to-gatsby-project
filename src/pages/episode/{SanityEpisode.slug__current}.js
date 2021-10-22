@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Layout from '../../components/layout.js';
 
 export const query = graphql`
-  query SanityEpisode($id: String!) {
+  query SanityEpisode($id: String) {
     sanityEpisode(id: { eq: $id }) {
       title
       description
@@ -12,6 +13,11 @@ export const query = graphql`
       }
       youtubeID
       date(fromNow: true)
+      image {
+        asset {
+          gatsbyImageData(placeholder: DOMINANT_COLOR)
+        }
+      }
     }
   }
 `;
@@ -21,6 +27,12 @@ export default function SanityEpisode({ data }) {
 
   return (
     <Layout title={episode.title} description={episode.description}>
+      {episode.image?.asset?.gatsbyImageData && (
+        <GatsbyImage
+          image={episode.image.asset.gatsbyImageData}
+          alt={episode.title}
+        />
+      )}
       <h1>{episode.title}</h1>
       <p>
         (posted {episode.date}) - {episode.description}
@@ -35,6 +47,7 @@ export default function SanityEpisode({ data }) {
           <a href={`https://youtu.be/${episode.youtubeID}`}>Watch on YouTube</a>
         </li>
       </ul>
+      <Link to="/">Back to home</Link>
     </Layout>
   );
 }
