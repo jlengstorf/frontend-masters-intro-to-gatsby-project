@@ -1,13 +1,14 @@
-import { Link } from 'gatsby'
-import React from 'react'
-
+import { Link } from 'gatsby';
+import React from 'react';
+import Layout from '../components/Layout';
 const IndexPage = () => {
   return (
-    <main>
-      <h1>Hello frontend masters</h1>
-      <Link to="/about">Link to about</Link>
-    </main>
-  )
-}
+    <>
+      <Layout>
+        <h1>Hello frontend masters</h1>
+      </Layout>
+    </>
+  );
+};
 
-export default IndexPage
+export default IndexPage;

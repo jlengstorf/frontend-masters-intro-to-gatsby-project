@@ -1,13 +1,17 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link } from 'gatsby';
+import React from 'react';
+import Layout from '../components/Layout';
 
 const AboutPage = () => {
   return (
-    <main>
+    <Layout
+      title="This is about this site"
+      description="A very descriptive site description"
+    >
       <h1>Hello from about</h1>
       <Link to="/">Back to home</Link>
-    </main>
-  )
-}
+    </Layout>
+  );
+};
 
-export default AboutPage
+export default AboutPage;
