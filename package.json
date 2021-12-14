@@ -8,11 +8,12 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "npm run use & gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "npm use & gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "use": "source $HOME/.nvm/nvm.sh; nvm use"
   },
   "dependencies": {
     "gatsby": "^3.11.1",
