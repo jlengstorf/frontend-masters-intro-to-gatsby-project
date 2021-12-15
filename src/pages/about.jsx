@@ -14,10 +14,6 @@ export const query = graphql`
 `;
 
 const AboutPage = ({ data }) => {
-  console.log('🚀 ~ file: about.jsx ~ line 17 ~ AboutPage ~ data', data);
-
-  const image = getImage(data.file);
-  console.log('🚀 ~ file: about.jsx ~ line 18 ~ AboutPage ~ image', image);
   return (
     <Layout
       title="This is about this site"

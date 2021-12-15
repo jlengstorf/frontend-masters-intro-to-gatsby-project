@@ -30,6 +30,7 @@
     "gatsby-plugin-sharp": "^4.4.0",
     "gatsby-remark-images": "^6.4.0",
     "gatsby-source-filesystem": "^4.4.0",
+    "gatsby-source-sanity": "^7.3.2",
     "gatsby-transformer-sharp": "^4.4.0",
     "postcss": "^8.4.5",
     "react": "^17.0.2",
