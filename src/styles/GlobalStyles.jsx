@@ -15,7 +15,7 @@ const customStyles = css`
     ${tw`text-black`}
   }
   main {
-    ${tw`prose prose-blue my-12 mx-auto px-2`}
+    ${tw`prose prose-lg prose-blue my-12 mx-auto px-2`}
   }
   main a {
     ${tw`no-underline focus:(outline-none ring-1 ring-blue-500 ring-offset-2)`}

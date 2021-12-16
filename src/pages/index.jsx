@@ -24,10 +24,21 @@ const IndexPage = (props) => {
           }
         }
       }
+      allSanityEpisode(sort: { fields: date, order: DESC }, limit: 20) {
+        nodes {
+          id
+          title
+          guest {
+            name
+          }
+          gatsbyPath(filePath: "/episode/{SanityEpisode.slug__current}")
+        }
+      }
     }
   `);
 
   const posts = data?.allMdx?.nodes;
+  const episodes = data?.allSanityEpisode?.nodes;
 
   return (
     <Layout>
@@ -55,6 +66,19 @@ const IndexPage = (props) => {
           })}
         </ul>
       )}
+      <h2>
+        Latest episodes of <em>Learn with Jason</em>
+      </h2>
+      <ul tw="leading-tight">
+        {episodes &&
+          episodes.map((episode) => {
+            return (
+              <li key={episode.id}>
+                <Link to={episode.gatsbyPath}>{episode.title}</Link>
+              </li>
+            );
+          })}
+      </ul>
     </Layout>
   );
 };
