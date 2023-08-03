@@ -1,9 +1,9 @@
 {
-  "name": "frontend-masters-intro-to-gatsby",
+  "name": "Personal-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Frontend Masters Intro to Gatsby",
-  "author": "Jason Lengstorf",
+  "description": "My Personal website and blogs",
+  "author": "Prashant Rawal",
   "keywords": [
     "gatsby"
   ],
@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "gatsby": "^3.11.1",
+    "gatsby-plugin-react-helmet": "^6.11.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0"
   }
 }
