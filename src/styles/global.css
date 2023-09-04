@@ -1,0 +1,22 @@
+:root{
+    --black:#333;
+    --gray:#555;
+    --white:#fff;
+}
+*{
+    box-sizing: border-box;
+
+}
+
+html,body{
+    color: var(--gray);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+body{
+    margin: 0;
+}
+h1{
+    color: var(--gray);
+}
