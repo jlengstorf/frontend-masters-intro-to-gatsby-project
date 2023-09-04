@@ -1,11 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 
-function index() {
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import Layout from '../componet/layout';
+
+export default function IndexPage() {
   return (
-    <div>
-      <h1>ddsddsdsddd</h1>
-    </div>
+    <Layout>
+      <h1>Hhhhh</h1>
+      <Link to="/about">About this site</Link>
+    </Layout>
   );
 }
-
-export default index;

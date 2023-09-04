@@ -1,11 +1,10 @@
 import React from 'react';
-
+import Layout from '../componet/layout';
 function about() {
   return (
-    <div>
+    <Layout>
       <h1>hi about page</h1>
-      <a href="/">home</a>
-    </div>
+    </Layout>
   );
 }
 
